@@ -1,0 +1,1 @@
+Практика «Fractal Painter. DIP»
