@@ -27,30 +27,30 @@ classDiagram
     class Body {
         <<abstract>>
         +Vector3 Position
-        +Accept(IVisitor visitor)* TResult
+        +Accept(IVisitor~TResult~ visitor)* TResult
     }
 
     class Ball {
         +double Radius
-        +Accept(IVisitor visitor) TResult
+        +Accept(IVisitor~TResult~ visitor) TResult
     }
 
     class RectangularCuboid {
         +double SizeX
         +double SizeY
         +double SizeZ
-        +Accept(IVisitor visitor) TResult
+        +Accept(IVisitor~TResult~ visitor) TResult
     }
 
     class Cylinder {
         +double SizeZ
         +double Radius
-        +Accept(IVisitor visitor) TResult
+        +Accept(IVisitor~TResult~ visitor) TResult
     }
 
     class CompoundBody {
         +IReadOnlyList~Body~ Parts
-        +Accept(IVisitor visitor) TResult
+        +Accept(IVisitor~TResult~ visitor) TResult
     }
 
     class IVisitor~TResult~ {
@@ -83,7 +83,7 @@ classDiagram
     IVisitor<|..BoundingBoxVisitor : Реализация интерфейса
     IVisitor<|..BoxifyVisitor : Реализация интерфейса
 
-    CompoundBodyo--Body : Агрегация
+    CompoundBody o-- Body : Агрегация
 
     Body..>IVisitor : Зависимость
     BoundingBoxVisitor..>RectangularCuboid : Зависимость
