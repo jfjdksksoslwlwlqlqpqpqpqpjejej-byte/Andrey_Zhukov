@@ -28,7 +28,7 @@
 
 **Interaction** - класс взаимодействия. Метод `Make()` проверяет `IArmy` (бой), `IOwner` (захват), `ITreasure` (сбор)
 
-### 2. Диаграмма классов (Mermaid)
+### 2. Диаграмма классов
 
 ```mermaid
 classDiagram
